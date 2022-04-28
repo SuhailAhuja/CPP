@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect
 from .models import Profile,Complaint
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-import requests
+
 
 
 
