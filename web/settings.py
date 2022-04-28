@@ -31,12 +31,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
      'django.contrib.sites',
-    'allauth', # new
-    'allauth.account', # new
-    'allauth.socialaccount',
+    
+   
     'reportlab',
-    'phonenumber_field', 
-    'django_extensions',  
+   
 ]
 
 MIDDLEWARE = [
