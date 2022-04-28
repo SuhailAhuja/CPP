@@ -23,7 +23,6 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'GRsystem',
-    'GRsystem.apps.SuitConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
