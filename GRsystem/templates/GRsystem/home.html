@@ -1,0 +1,56 @@
+{% extends "GRsystem/index.html" %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+{% block content %}
+<style>
+body
+{
+
+    background-color: #007bff ;
+    
+}
+img{
+  width:100%;
+  height:100%;
+}
+.card
+{
+  border:#007bff !important;
+}
+</style>
+          {% load static %}
+  
+
+<div class="card bg-info text-white">
+    
+                <div class="ml-2">
+                <p style="color:white;bg-info; font-size:30px;"> <b>NCI Prints</b></p>
+ </div>
+<center>
+
+        <img src="https://www.laoistoday.ie/wp-content/uploads/2018/02/Print-Services-1.jpg" class="d-block w-80" alt="...">
+        {% if documents %}
+        All documents in the database:
+        <ul>
+            {% for document in GRsystemproject %}
+                <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents.</p>
+    {% endif %}
+    
+    
+
+
+</center>
+
+  {% endblock %}

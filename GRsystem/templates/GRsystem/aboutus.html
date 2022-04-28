@@ -1,0 +1,52 @@
+{% extends "GRsystem/index.html" %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+{% block content %}
+<style>
+body
+{
+
+    background-color:black ;
+ 
+}
+#mid{
+  left: 0;
+
+    margin-top: -100px;
+    position: absolute;
+  
+    top: 50%;
+    width: 100%;
+}
+</style>
+<br>
+          {% load static %}
+          <div id="mid">
+ <center> 
+ 
+			<H1 style="color:white";>NCI Prints </H1>  
+ <H5 style="color:white";></t>Created By Suhail Ahuja </H5>
+      <H5 style="color:white";>Student ID-20191065 </H5>   
+	             
+
+</center>
+</div>
+
+{% if documents %}
+All documents in the database:
+<ul>
+    {% for document in 26 %}
+        <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No documents.</p>
+{% endif %}
+
+  {% endblock %}

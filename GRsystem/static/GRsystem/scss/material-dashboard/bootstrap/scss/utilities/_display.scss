@@ -1,0 +1,38 @@
+// stylelint-disable declaration-no-important
+
+//
+// Utilities for common `display` values
+//
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d#{$infix}-none         { display: none !important; }
+    .d#{$infix}-inline       { display: inline !important; }
+    .d#{$infix}-inline-block { display: inline-block !important; }
+    .d#{$infix}-block        { display: block !important; }
+    .d#{$infix}-table        { display: table !important; }
+    .d#{$infix}-table-row    { display: table-row !important; }
+    .d#{$infix}-table-cell   { display: table-cell !important; }
+    .d#{$infix}-flex         { display: flex !important; }
+    .d#{$infix}-inline-flex  { display: inline-flex !important; }
+  }
+}
+
+
+//
+// Utilities for toggling `display` in Complaint
+//
+
+@media Complaint {
+  .d-Complaint-none         { display: none !important; }
+  .d-Complaint-inline       { display: inline !important; }
+  .d-Complaint-inline-block { display: inline-block !important; }
+  .d-Complaint-block        { display: block !important; }
+  .d-Complaint-table        { display: table !important; }
+  .d-Complaint-table-row    { display: table-row !important; }
+  .d-Complaint-table-cell   { display: table-cell !important; }
+  .d-Complaint-flex         { display: flex !important; }
+  .d-Complaint-inline-flex  { display: inline-flex !important; }
+}
