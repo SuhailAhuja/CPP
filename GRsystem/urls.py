@@ -8,7 +8,7 @@ urlpatterns=[
     url(r'^$',views.index,name='index'),
     url(r'^register/$', views.register, name='register'),
     url(r'^signin/$',auth_views.LoginView.as_view(template_name='GRsystem/signin.html'), name='signin'),
-    url('logout/', auth_views.LogoutView.as_view(template_name='Grsystem/logout.html'), name='logout'),
+    url('logout/', auth_views.LogoutView.as_view(template_name='GRsystem/logout.html'), name='logout'),
     url(r'^password/$', views.change_password, name='change_password'),
     url(r'^counter/$', views.counter, name='counter'),
     url(r'^solved/$', views.solved, name='solved'),
