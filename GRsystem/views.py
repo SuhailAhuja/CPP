@@ -226,13 +226,13 @@ def list(request):
     result=Complaint.objects.filter(user=request.user).exclude(Q(status='3') | Q(status='2'))
     #c=Complaint.objects.all()
     args={'c':c,'result':result}
-    return render(request,'Grsystem/Complaints.html',args)
+    return render(request,'GRsystem/Complaints.html',args)
 @login_required
 def slist(request):
     result=Complaint.objects.filter(user=request.user).exclude(Q(status='3') | Q(status='2'))
     #c=Complaint.objects.all()
     args={'result':result}
-    return render(request,'Grsystem/solvedComplaint.html',args)
+    return render(request,'GRsystem/solvedComplaint.html',args)
 
 @login_required
 def allprintrequests(request):
@@ -267,7 +267,7 @@ def allprintrequests(request):
                 forms=statusupdate()
                    
         args={'c':c,'forms':forms,'comp':comp}
-        return render(request,'Grsystem/allprintrequests.html',args)
+        return render(request,'GRsystem/allprintrequests.html',args)
 
 @login_required
 def solved(request):
@@ -301,7 +301,7 @@ def solved(request):
                 forms=statusupdate()
         
         args={'c':c,'forms':forms,'comp':comp}
-        return render(request,'Grsystem/solved.html',args)
+        return render(request,'GRsystem/solved.html',args)
 
 #allprintrequests pdf viewer.
 def pdf_viewer(request):
